@@ -3,9 +3,19 @@ import {
     FaRegArrowAltCircleUp,
     FaRegArrowAltCircleDown,
     FaTrash,
-} from 'react-icons/fa'
+} from 'react-icons/fa';
 
-const GridItem = ({ item, onDelete }) => {
+interface GridItemTypes {
+    item: {
+        id: string,
+        desc: string,
+        amount: number,
+        expense: boolean,
+    };
+    onDelete: any;
+}
+
+const GridItem = ({ item, onDelete }: GridItemTypes) => {
     return (
         <>
             <C.Tr>
@@ -19,7 +29,7 @@ const GridItem = ({ item, onDelete }) => {
                     )}
                 </C.Td>
                 <C.Td alignCenter>
-                    <FaTrash />
+                    <FaTrash onClick={() => onDelete(item.id)}/>
                 </C.Td>
             </C.Tr>
         </>

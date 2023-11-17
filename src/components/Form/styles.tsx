@@ -53,3 +53,10 @@ export const Button = styled.button`
     border: none;
     border-radius: 5px;
 `
+
+export const ContainerExtern = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`
