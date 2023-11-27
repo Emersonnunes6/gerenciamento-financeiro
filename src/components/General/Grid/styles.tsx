@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 interface Props {
-    width?: number;
-    alignCenter?: boolean;
+    $width?: number;
+    $alignCenter?: boolean;
 }
 
 export const Table = styled.table`
@@ -24,6 +24,6 @@ export const Tr = styled.tr``;
 export const Th = styled.th<Props>`
     border-bottom: inset;
     padding-bottom: 5px;
-    text-align: ${(p) => (p.alignCenter ? 'center' : 'start')};
-    width: ${(p) => (p.width ? p.width + '%' : 'auto')};
+    text-align: ${(p) => (p.$alignCenter ? 'center' : 'start')};
+    width: ${(p) => (p.$width ? p.$width + '%' : 'auto')};
 `;
